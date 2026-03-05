@@ -1,6 +1,7 @@
 # 🎫 WIS Auditorium Booking
 
-> Hệ thống đặt chỗ trực tuyến dành cho hội trường WIS — hỗ trợ real-time seat map, thanh toán tích hợp, check-in bằng QR code và quản trị toàn diện.
+> Hệ thống đặt chỗ trực tuyến dành cho hội trường WIS — hỗ trợ real-time seat map, thanh toán tích hợp, check-in bằng QR code và quản trị toàn diện. ![Demo](https://wis.edticket.com/) 
+
 
 ![Status](https://img.shields.io/badge/status-production-brightgreen)
 ![Node](https://img.shields.io/badge/Node.js-≥18-339933?logo=node.js)
