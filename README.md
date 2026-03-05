@@ -407,4 +407,4 @@ Các model chính trong hệ thống:
 
 ## 📄 License
 
-ISC © WIS Auditorium Booking Team
+© WIS Auditorium Booking
