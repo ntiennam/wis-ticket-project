@@ -1,6 +1,12 @@
-<![CDATA[# 🎫 WIS Auditorium Booking
+# 🎫 WIS Auditorium Booking
 
 > Hệ thống đặt chỗ trực tuyến dành cho hội trường WIS — hỗ trợ real-time seat map, thanh toán tích hợp, check-in bằng QR code và quản trị toàn diện.
+
+![Status](https://img.shields.io/badge/status-production-brightgreen)
+![Node](https://img.shields.io/badge/Node.js-≥18-339933?logo=node.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript)
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-336791?logo=postgresql)
 
 ---
 
@@ -60,27 +66,7 @@ Dự án được thiết kế với kiến trúc **monorepo** gồm backend API
 
 ## 🏗 Kiến trúc hệ thống
 
-```
-┌─────────────────────────────────────────────────────┐
-│                     Nginx (Reverse Proxy)            │
-│         wis.edticket.com → Frontend (static)         │
-│     api.wis.edticket.com → Backend (port 8080)       │
-└──────────┬──────────────────────────┬────────────────┘
-           │                          │
-    ┌──────▼──────┐           ┌───────▼───────┐
-    │  Frontend   │           │   Backend     │
-    │  React SPA  │◄── SSE ──►│  Fastify API  │
-    │  (Vite)     │           │  (TypeScript) │
-    └─────────────┘           └───┬───┬───┬───┘
-                                  │   │   │
-                    ┌─────────────┘   │   └─────────────┐
-                    │                 │                   │
-             ┌──────▼──────┐  ┌──────▼──────┐  ┌────────▼────────┐
-             │ PostgreSQL  │  │    Redis     │  │   SMTP Server   │
-             │  (Prisma)   │  │  (Sessions   │  │  (SendGrid /    │
-             │             │  │   & Cache)   │  │   Nodemailer)   │
-             └─────────────┘  └─────────────┘  └─────────────────┘
-```
+![Sơ đồ kiến trúc](./architecture.png)
 
 ---
 
@@ -421,5 +407,4 @@ Các model chính trong hệ thống:
 
 ## 📄 License
 
-© WIS Auditorium Booking 
-]]>
+ISC © WIS Auditorium Booking Team
